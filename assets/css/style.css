@@ -10,7 +10,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
 
@@ -60,7 +60,7 @@ img {
 
 .header {
   position: absolute;
-  top: 4.6875vw;
+  top: 3.5vw;
   left: 6.25vw;
   right: 6.25vw;
   z-index: 999; }
@@ -210,32 +210,53 @@ img {
       flex-direction: column; } }
   .main .container {
     display: flex;
-    flex: 0 0 100%;
+    flex: 0 0 50%;
     height: 100%; }
+    @media (max-width: 799px) {
+      .main .container {
+        flex-direction: column; } }
     .main .container_content, .main .container_img {
       flex: 0 0 50%; }
     .main .container_content {
+      flex: 1;
       display: flex;
       justify-content: center;
       flex-direction: column;
       padding: 4rem 6rem;
       transition: all 0.2s; }
-  .main .home_heading {
-    font-size: 6rem;
-    line-height: 1.3;
-    margin-bottom: 3rem;
-    -webkit-animation: slide-left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
-    animation: slide-left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }
-  .main .home_subheading {
-    font-size: 3.5rem;
-    -webkit-animation: slide-right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s both;
-    animation: slide-right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s both; }
-  .main .home_img {
-    background-image: url(../img/leaves.jpeg);
-    z-index: 1; }
-  .main .about_img {
-    background-image: url(../img/pexels-photo-1216345.jpeg);
-    z-index: 1; }
-  .main .work_img {
-    background-image: url(../img/pexels-photo-1418329.jpeg);
-    z-index: 1; }
+      @media (max-width: 799px) {
+        .main .container_content {
+          text-align: center;
+          padding: 2rem 3rem; } }
+  .main p {
+    font-size: 2.2rem;
+    line-height: 1.5; }
+  .main ul {
+    font-size: 2rem; }
+  .main .home {
+    flex: 0 0 100%; }
+    .main .home_heading {
+      font-size: 6rem;
+      line-height: 1.3;
+      margin-bottom: 3rem;
+      -webkit-animation: slide-left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+      animation: slide-left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }
+    .main .home_subheading {
+      font-size: 3.5rem;
+      -webkit-animation: slide-right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s both;
+      animation: slide-right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s both; }
+    .main .home_img {
+      background-image: url(../img/leaves.jpeg);
+      z-index: 1; }
+  .main .about {
+    background: #000;
+    color: #fff; }
+    .main .about p {
+      margin-top: 10rem; }
+  .main .work_list {
+    margin-top: 3rem; }
+  .main .blog {
+    background: #000;
+    color: #fff; }
+    .main .blog h4 {
+      font-size: 2.5rem; }
