@@ -26,6 +26,14 @@ $(document).ready(function() {
     $(".header_mobile-nav").fadeToggle("slow", "linear");
   });
 
+  $(".header_mobile_list-link").on("click", function() {
+    $(".header_mobile-background").removeClass(
+      "header_mobile-background--scale"
+    );
+    $(".header_mobile-button").removeClass("header_mobile-button--checked");
+    $(".header_mobile-nav").fadeOut("slow", "linear");
+  });
+
   function isOdd(num) {
     return num % 2;
   }
